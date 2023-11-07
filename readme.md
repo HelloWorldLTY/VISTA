@@ -76,7 +76,7 @@ model = GIMVI_GCN(adata_sc, adata_st)
 
 ## Training:
 
-Now you can start training and save the imputation results
+Now you can start training and save the imputation results.
 
 ```
 # train for 200 epochs
@@ -101,7 +101,7 @@ More information for API and hyper-parameter settings can be found in the folder
 
 The codes for evaluation can be found in the folder metrics.
 
-For Tangram, we implemented a mini-batch version based on. The mini-batch version can be found in this link. For the rest of the methods, please refer their project website for installation and usage: [gimVI](https://docs.scvi-tools.org/en/0.20.3/tutorials/notebooks/gimvi_tutorial.html), [TransImp](https://transpa.readthedocs.io/en/latest/install.html), and [SpaGE](https://github.com/tabdelaal/SpaGE). 
+For Tangram, we implemented a mini-batch version based on this [idea](https://github.com/broadinstitute/Tangram/issues/100). The mini-batch version can be found in this [link](https://github.com/HelloWorldLTY/Tangram_v2.git). For the rest of the methods, please refer their project website for installation and usage: [gimVI](https://docs.scvi-tools.org/en/0.20.3/tutorials/notebooks/gimvi_tutorial.html), [TransImp](https://transpa.readthedocs.io/en/latest/install.html), and [SpaGE](https://github.com/tabdelaal/SpaGE). 
 
 # Applications
 
