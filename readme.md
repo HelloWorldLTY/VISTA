@@ -2,16 +2,18 @@
 
 # Install
 
-To install ImputeVI, please install [scvi](https://docs.scvi-tools.org/en/stable/tutorials/index.html) in ahead, using:
+To install ImputeVI, please install [scvi](https://docs.scvi-tools.org/en/stable/tutorials/index.html) and [scanpy](https://scanpy-tutorials.readthedocs.io/en/latest/index.html) in ahead, using:
 
 ```
 conda install scvi-tools -c conda-forge
+conda install scanpy
 ```
 
 or
 
 ```
-pip install scvi-tools
+pip install scvi-tools 
+pip install scanpy
 ```
 
 Then you can install imputevi based on :
@@ -23,7 +25,7 @@ pip install ImputeVI
 or you can clone this folder and load the codes from imputevi folder.
 
 ```
-git clone 
+git clone https://github.com/HelloWorldLTY/ImputeVI.git
 ```
 
 # Key functions
@@ -35,6 +37,7 @@ The general process of running ImputeVI contains three steps: pre-processing, mo
 Please ensure your reference scRNA-seq dataset and spatial data for imputation are all count-based data. And also please ensure the cell type label infromation of these two datasets is stored in the key **scClassify** of the anndata object.
 
 ```
+import scanpy as sc
 adata_sc = sc.read("path_scrnaseq")
 adata_st = sc.read("path_spatial")
 print(adata_st.obs.scClassify.unique()) # should print out the cell type labels.
@@ -112,3 +115,5 @@ The codes for downstream applications can be found in the folder notebooks. To r
 We refer the codes from the following packages to implement our ImputeVI. Many thanks to these great developers:
 
 [gimVI](https://github.com/scverse/scvi-tools/tree/main/scvi/external/gimvi), [H2GCN](https://github.com/GitEventhandler/H2GCN-PyTorch/blob/master/model.py) and [SIMVI](https://github.com/KlugerLab/SIMVI).
+
+If you have any questions about this project, please contact tianyu.liu@yale.edu.
