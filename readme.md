@@ -2,11 +2,12 @@
 
 # Install
 
-To install ImputeVI, please install [scvi](https://docs.scvi-tools.org/en/stable/tutorials/index.html) and [scanpy](https://scanpy-tutorials.readthedocs.io/en/latest/index.html) in ahead, using:
+To install ImputeVI, please install [scvi](https://docs.scvi-tools.org/en/stable/tutorials/index.html), [scanpy](https://scanpy-tutorials.readthedocs.io/en/latest/index.html) and [pyg](https://pytorch-geometric.readthedocs.io/en/latest/index.html) in ahead, using:
 
 ```
 conda install scvi-tools -c conda-forge
 conda install scanpy
+conda install pyg -c pyg
 ```
 
 or
@@ -14,6 +15,7 @@ or
 ```
 pip install scvi-tools 
 pip install scanpy
+pip install torch_geometric
 ```
 
 Then you can install imputevi based on :
@@ -40,7 +42,10 @@ Please ensure your reference scRNA-seq dataset and spatial data for imputation a
 import scanpy as sc
 adata_sc = sc.read("path_scrnaseq")
 adata_st = sc.read("path_spatial")
-print(adata_st.obs.scClassify.unique()) # should print out the cell type labels.
+# should print out the cell type labels.
+print(adata_st.obs.scClassify.unique()) 
+# should print out the cell type labels.
+print(adata_sc.obs.scClassify.unique()) 
 ```
 
 Then you can filter genes with lower correlation by:
@@ -103,6 +108,11 @@ The codes for evaluation can be found in the folder metrics.
 
 For Tangram, we implemented a mini-batch version based on this [idea](https://github.com/broadinstitute/Tangram/issues/100). The mini-batch version can be found in this [link](https://github.com/HelloWorldLTY/Tangram_v2.git). For the rest of the methods, please refer their project website for installation and usage: [gimVI](https://docs.scvi-tools.org/en/0.20.3/tutorials/notebooks/gimvi_tutorial.html), [TransImp](https://transpa.readthedocs.io/en/latest/install.html), and [SpaGE](https://github.com/tabdelaal/SpaGE). 
 
+We also need the following packages to run the metrics for evaluation:
+
+[scib](https://github.com/theislab/scib), [SpatialDE](https://github.com/Teichlab/SpatialDE), and [squidpy](https://github.com/scverse/squidpy).
+
+
 # Applications
 
 The codes for downstream applications can be found in the folder notebooks. To runn all the analysis for applications, you need to install the following packages:
@@ -112,8 +122,8 @@ The codes for downstream applications can be found in the folder notebooks. To r
 
 # Acknowledgement
 
-We refer the codes from the following packages to implement our ImputeVI. Many thanks to these great developers:
+We refer the codes from the following packages to implement ImputeVI. Many thanks to these great developers:
 
-[gimVI](https://github.com/scverse/scvi-tools/tree/main/scvi/external/gimvi), [H2GCN](https://github.com/GitEventhandler/H2GCN-PyTorch/blob/master/model.py) and [SIMVI](https://github.com/KlugerLab/SIMVI).
+[gimVI](https://github.com/scverse/scvi-tools/tree/main/scvi/external/gimvi), [H2GCN](https://github.com/GitEventhandler/H2GCN-PyTorch/blob/master/model.py), [SIMVI](https://github.com/KlugerLab/SIMVI), and [SpatialBenchmarking](https://github.com/QuKunLab/SpatialBenchmarking).
 
 If you have any questions about this project, please contact tianyu.liu@yale.edu.
