@@ -15,7 +15,13 @@ or
 ```
 pip install scvi-tools 
 pip install scanpy
-pip install torch_geometric
+pip install torch_geometric 
+```
+
+You also need to install [FAISS](https://github.com/facebookresearch/faiss):
+
+```
+conda install -c pytorch -c nvidia faiss-gpu=1.7.4 mkl=2021 blas=1.0=mkl
 ```
 
 Then you can install imputevi based on :
