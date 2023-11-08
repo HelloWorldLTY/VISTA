@@ -765,7 +765,8 @@ class JVAE(BaseModuleClass):
             index_x = [int(item) for item in index_x[0]]
             adata_new = self.spatial_data[index_x].copy()
 
-            edge_index = extract_edge_index(adata_new, spatial_key = 'spatial',  n_neighbors = self.neighbor_size).to(self.device_)
+            n_neighbors = min(self.neighbor_size, len(index_x))
+            edge_index = extract_edge_index(adata_new, spatial_key = 'spatial',  n_neighbors = n_neighbors).to(self.device_)
             loc_gat = self.graph_encoder_loc(qz.loc, edge_index)
             scale_gat = torch.exp(self.graph_encoder_scale(qz.scale, edge_index))
             qz.loc = qz.loc + loc_gat
