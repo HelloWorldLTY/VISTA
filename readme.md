@@ -27,14 +27,11 @@ conda install -c pytorch -c nvidia faiss-gpu=1.7.4 mkl=2021 blas=1.0=mkl
 Then you can install vista based on :
 
 ```
-pip install VISTA
-```
-
-or you can clone this folder and load the codes from vista folder.
-
-```
 git clone https://github.com/HelloWorldLTY/VISTA.git
+cd VISTA
+pip install .
 ```
+
 
 # Key functions
 
