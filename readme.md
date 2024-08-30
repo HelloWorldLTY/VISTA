@@ -132,3 +132,14 @@ We refer the codes from the following packages to implement VISTA. Many thanks t
 If you have any questions about this project, please contact tianyu.liu@yale.edu.
 
 # Citation
+
+```
+@article{liu2024vista,
+  title={VISTA Uncovers Missing Gene Expression and Spatial-induced Information for Spatial Transcriptomic Data Analysis},
+  author={Liu, Tianyu and Lin, Yingxin and Luo, Xiao and Sun, Yizhou and Zhao, Hongyu},
+  journal={bioRxiv},
+  pages={2024--08},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
