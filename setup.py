@@ -10,5 +10,5 @@ setup(
     description='A Python package imputation.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/HelloWorldLTY/VISTA,
+    url='https://github.com/HelloWorldLTY/VISTA',
 )
