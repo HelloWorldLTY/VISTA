@@ -8,7 +8,7 @@ setup(
     author='Tianyu Liu',
     author_email='your.email@example.com',
     description='A Python package imputation.',
-    long_description=open('README.md').read(),
+    long_description=open('readme.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/HelloWorldLTY/VISTA',
 )
