@@ -5,17 +5,17 @@
 To install VISTA, please install [scvi](https://docs.scvi-tools.org/en/stable/tutorials/index.html), [scanpy](https://scanpy-tutorials.readthedocs.io/en/latest/index.html) and [pyg](https://pytorch-geometric.readthedocs.io/en/latest/index.html) in ahead, using:
 
 ```
-conda install scvi-tools -c conda-forge
-conda install scanpy
-conda install pyg -c pyg
+pip install scvi-tools==0.20.3 
+pip install scanpy==1.9.3
+pip install torch_geometric 
 ```
 
 or
 
 ```
-pip install scvi-tools 
-pip install scanpy
-pip install torch_geometric 
+conda install scvi-tools -c conda-forge
+conda install scanpy
+conda install pyg -c pyg
 ```
 
 You also need to install [FAISS](https://github.com/facebookresearch/faiss):
