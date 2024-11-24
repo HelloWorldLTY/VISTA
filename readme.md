@@ -32,6 +32,8 @@ cd VISTA
 pip install .
 ```
 
+We provide a yml file for related packages, feel free to use and check.
+
 
 # Key functions
 
